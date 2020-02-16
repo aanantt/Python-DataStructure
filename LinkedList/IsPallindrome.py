@@ -5,7 +5,7 @@ class Node:
 class linkedList:
     def __init__(self):
         self.head=None
-    def add_at_last(self,node):
+    def add(self,node):
         if self.head is None:
             self.head = node
             return
@@ -13,17 +13,18 @@ class linkedList:
         while cur_node.next:
             cur_node=cur_node.next
         cur_node.next=node
-    def print(self):
+    def isPallindrome(self):
+        s=""
         cur_node=self.head
         while cur_node:
-            print(cur_node.value)
-            cur_node=cur_node.next
-
+            s+=str(cur_node.value)
+            cur_node = cur_node.next
+        return s==s[::-1]
 l=linkedList()
-l.add_at_last(Node(1))
-l.add_at_last(Node(2))
-l.add_at_last(Node(3))
-l.add_at_last(Node(3))
-l.add_at_last(Node(2))
-l.add_at_last(Node(1))
-l.print()
+l.add(Node(1))
+l.add(Node(2))
+l.add(Node(3))
+l.add(Node(3))
+l.add(Node(2))
+l.add(Node(1))
+print(l.isPallindrome())
