@@ -4,7 +4,7 @@ class Node:
         self.element = element
         self.right_node = None
         self.left_node = None
-class BST:
+class BinaryTree:
     def __init__(self,root_Node):
         self.root= root_Node
     def postOrderTraversal(self,start_node,data):
@@ -23,7 +23,7 @@ class BST:
             self.print(root.left_node, space)
 
 
-tree = BST(Node(1))
+tree = BinaryTree(Node(1))
 tree.root.left_node = Node(2)
 tree.root.right_node = Node(3)
 tree.root.left_node.left_node = Node(4)
