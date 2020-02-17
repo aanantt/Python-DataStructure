@@ -20,6 +20,7 @@ class BinaryTree:
             for i in range(COUNT[0], space):
                 print(end=" ")
             print(root.element)
+            
             self.print(root.left_node, space)
 
 tree = BinaryTree(Node(1))
