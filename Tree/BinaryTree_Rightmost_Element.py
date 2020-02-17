@@ -3,7 +3,7 @@ class Node:
         self.element = element
         self.right_node = None
         self.left_node = None
-class BST:
+class BinaryTree:
     def __init__(self, root_Node):
         self.root= root_Node
     def rightMost(self,node):#Right Most Element in a BST
@@ -12,7 +12,7 @@ class BST:
             return True
         print(node.element)
 
-tree = BST(Node(1))
+tree = BinaryTree(Node(1))
 tree.root.left_node = Node(2)
 tree.root.right_node = Node(3)
 tree.root.left_node.left_node = Node(4)
